@@ -1,0 +1,117 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  max-width: 850px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.inputs label {
+  display: block;
+  margin: 10px 0;
+}
+
+.inputs input {
+  width: 100px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.init-btn {
+  background-color: #007bff;
+}
+
+.car {
+  background-color: #4CAF50;
+}
+
+.bus {
+  background-color: #ff9800;
+}
+
+.bike {
+  background-color: #9c27b0;
+}
+
+.info {
+  background-color: #03a9f4;
+}
+
+.reset {
+  background-color: #f44336;
+}
+
+.output {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e0f7fa;
+  border-radius: 8px;
+  white-space: pre-line;
+  font-weight: bold;
+}
+
+/* Parking Display */
+#parkingDisplay {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.slot-group {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  width: 30%;
+  min-height: 80px;
+  text-align: center;
+}
+
+.slot-group i {
+  font-size: 30px;
+  margin: 5px;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  display: inline-block;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.8); }
+}

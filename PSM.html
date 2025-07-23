@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parking Management System</title>
+  <link rel="stylesheet" href="PSM.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🚗🅿️ Parking Management System</h1>
+
+    <div class="inputs">
+      <label>Total Space: <input type="number" id="totalSpace" /></label>
+      <label><i class="fas fa-bus"></i> Bus Space: <input type="number" id="busSpace" /></label>
+      <label><i class="fas fa-car"></i> Car Space: <input type="number" id="carSpace" /></label>
+      <label><i class="fas fa-motorcycle"></i> Bike Space: <input type="number" id="bikeSpace" /></label>
+      <button class="init-btn" onclick="initialize()">Initialize</button>
+    </div>
+
+    <div id="controls" style="display:none;">
+      <h2>🚦 Controls</h2>
+      <button class="car" onclick="enterVehicle('car')"><i class="fas fa-car"></i> Enter Car</button>
+      <button class="car" onclick="exitVehicle('car')"><i class="fas fa-car"></i> Exit Car</button>
+      <button class="bus" onclick="enterVehicle('bus')"><i class="fas fa-bus"></i> Enter Bus</button>
+      <button class="bus" onclick="exitVehicle('bus')"><i class="fas fa-bus"></i> Exit Bus</button>
+      <button class="bike" onclick="enterVehicle('bike')"><i class="fas fa-motorcycle"></i> Enter Bike</button>
+      <button class="bike" onclick="exitVehicle('bike')"><i class="fas fa-motorcycle"></i> Exit Bike</button>
+      <br><br>
+      <button class="info" onclick="showVacantSpaces()">📊 Show Vacant Space</button>
+      <button class="info" onclick="showFullRecord()">📋 Show Full Record</button>
+      <button class="reset" onclick="reset()">♻️ Reset</button>
+    </div>
+
+    <div class="output" id="output">🔧 Waiting for system initialization...</div>
+
+    <h2>🅿️ Parking Slots</h2>
+    <div id="parkingDisplay">
+      <div class="slot-group" id="carDisplay"><h3>🚗 Cars (<span id="carCount">0</span>)</h3></div>
+      <div class="slot-group" id="busDisplay"><h3>🚌 Buses (<span id="busCount">0</span>)</h3></div>
+      <div class="slot-group" id="bikeDisplay"><h3>🏍️ Bikes (<span id="bikeCount">0</span>)</h3></div>
+    </div>
+  </div>
+
+  <script src="PSM.js"></script>
+</body>
+</html>
